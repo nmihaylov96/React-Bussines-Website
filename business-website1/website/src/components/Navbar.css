@@ -1,0 +1,161 @@
+/* Горна лента */
+.top-bar {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+    width: 100%;
+}
+
+.top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Контактна информация */
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Добавено разстояние между иконата и номера */
+}
+
+.social-icon {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f39c12;
+}
+
+.phone-number {
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Това подравнява текста и иконата по вертикала */
+}
+
+/* Размер на иконките */
+.social-icon img,
+.phone-icon {
+    width: 20px;  /* Размер на иконката */
+    height: 20px;
+    max-width: 20px;
+    max-height: 20px;
+}
+
+/* Меню в горната лента */
+.top-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.top-menu li {
+    margin-left: 20px;
+}
+
+.top-menu .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.top-menu .nav-link:hover {
+    color: #f39c12;
+}
+
+/* Основен навигационен бар */
+.navbar {
+    background-color: #333;
+    padding: 15px 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+.navbar-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Подравняване на елементите от ляво и дясно */
+    align-items: center;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Подравняване по център */
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px; /* Разстояние между линковете */
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #f39c12;
+    border-radius: 5px;
+}
+
+/* Стилове за името на сайта */
+.site-name {
+    color: white; /* Бял цвят на текста */
+    font-size: 24px; /* Размер на шрифта */
+    font-weight: bold; /* Удебелен текст */
+    text-decoration: none; /* Без подчертаване на текста */
+    margin-right: 30px; /* Разстояние от останалите линкове */
+    transition: none; /* Премахваме всякакъв ефект на hover */
+}
+
+.site-name:hover {
+    color: white; /* Няма да има промяна на цвета при hover */
+}
+
+/* Мобилна версия */
+@media (max-width: 768px) {
+    .top-bar-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info {
+        justify-content: center;
+    }
+
+    .top-menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin-bottom: 10px;
+    }
+}

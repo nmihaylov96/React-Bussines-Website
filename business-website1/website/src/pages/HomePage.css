@@ -1,0 +1,455 @@
+/* Основен контейнер */
+.home-page {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+/* Заглавие */
+.home-page h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Подзаглавие */
+.home-page p {
+    font-size: 20px;
+    color: #666;
+}
+
+/* Хедър секция */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url('https://delice.bg/wp-content/uploads/2019/03/slider-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Заглавие и подзаглавие секция */
+.header-cc {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.cc-title-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.cc-title-wrap svg {
+    margin-right: 10px;
+}
+
+.cc-main-title {
+    font-size: 24px;
+    color: #333;
+}
+
+.cc-subtitle {
+    font-size: 20px;
+    color: #666;
+}
+
+.right-section {
+    margin-left: auto;
+}
+
+.cat-description {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Основен контейнер за навигацията и изображенията */
+.content-cc {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    gap: 20px;
+}
+
+/* Навигация */
+.nav-cc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+    width: 30%;
+}
+
+.nav-item {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item.active,
+.nav-item:hover {
+    background-color: #f39c12;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Галерия */
+.door-images {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.door-images-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 15px;
+}
+
+.door-item {
+    width: calc(33.33% - 10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.door-item img {
+    width: 100%;
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.door-item:hover img {
+    filter: blur(3px) brightness(0.7);
+    transform: scale(1.05);
+}
+
+.door-info {
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    background: gray;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    transition: bottom 0.3s;
+}
+
+.door-item:hover .door-info {
+    bottom: 0;
+}
+
+/* Анимация за преливаща информация */
+.slide-in {
+    animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Стил за бутона "Виж всички продукти" */
+.cc-cat-link {
+    display: flex;
+    justify-content: flex-end; /* Подравняваме бутона вдясно */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.main-button {
+    background-color: white;
+    color: #333; /* Променяме цвета на текста на черен */
+    padding: 15px 30px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s, color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.main-button:hover {
+    background-color: #f39c12; /* Променяме цвета на фона при hover */
+    transform: scale(1.05);
+    border-color: #f39c12;
+}
+
+.main-button svg {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    fill: #333;
+    transition: fill 0.3s;
+}
+
+.main-button:hover svg {
+    fill: white;
+}
+
+.main-button .button-label {
+    margin-right: 5px;
+}
+
+/* Това е ключовата промяна */
+.see-more {
+    color: #333; /* Текстът е черен по подразбиране */
+    text-decoration: none; /* Премахваме подчертаването */
+    transition: color 0.3s; /* Добавяме плавен преход на цвета */
+}
+
+.main-button:hover .see-more { /* При hover на .main-button, променяме цвета на .see-more */
+    color: white; /* Текстът става бял при hover */
+}
+
+/* Custom Section Styles */
+.custom-section {
+    width: 100%;
+    overflow: hidden; /* За да скрием излизащото изображение */
+    position: relative; /* За позициониране на елементите вътре */
+    padding: 100px 0; /* Добавяме вертикален padding */
+    /* Тук можете да добавите нестандартна форма, например: */
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+}
+
+.custom-section-content {
+    display: flex;
+    align-items: center; /* Центрираме вертикално съдържанието */
+    justify-content: center; /* Центрираме хоризонтално съдържанието */
+    max-width: 1200px; /* Задаваме максимална ширина на съдържанието */
+    margin: 0 auto; /* Центрираме хоризонтално секцията */
+    position: relative; /* За да позиционираме текста върху изображението */
+    z-index: 1; /* Поставяме съдържанието над изображението */
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* За да скрием излизащото изображение при скрол */
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* За да покрие изображението цялата площ */
+    position: fixed; /* За да остане на място при скрол */
+    top: 0; /* За да започне от горната част на екрана */
+    z-index: -1; /* Поставяме изображението зад съдържанието */
+}
+
+.text-content {
+    text-align: center; /* Центрираме текста */
+    color: white; /* Задаваме цвят на текста */
+    padding: 20px; /* Добавяме padding около текста */
+}
+
+/* Допълнителни стилове за текста */
+.text-content p {
+    font-size: 52px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.info-section {
+    width: 100%;
+    padding: 50px;
+    background-color: #f0f0f0;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: row; /* Поставяме изображенията отляво */
+    align-items: center;
+    position: relative; /* За да може текстът да бъде върху изображенията */
+}
+
+.image-container {
+    width: 30%; /* Намаляваме размера на изображенията */
+    display: flex;
+    flex-direction: column; /* Подреждаме изображенията вертикално */
+    gap: 10px;
+    position: relative; /* Ако искаш изображенията да стоят зад текста, смени с absolute */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0.8; /* Малко прозрачност за ефект зад текста */
+}
+
+.text-content {
+    width: 50%;
+    position: relative;
+    z-index: 2; /* За да е над изображенията */
+    background: rgba(255, 255, 255, 0); /* Добавяме лек фон, за да се чете текста */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.text-content h2 {
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    margin-bottom: 30px;
+}
+
+.button-container {
+    text-align: right; /* Подравняваме бутона вдясно */
+}
+
+.about-us-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #f39c12;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.about-us-button:hover {
+    background-color: #e67e22;
+}
+
+.footer {
+    background-color: #2b2b2b; /* тъмно сив фон */
+    color: white;
+    padding: 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column; /* подрежда елементите вертикално */
+    align-items: center; /* центрира елементите хоризонтално */
+    max-width: 1200px; /* ограничава ширината на съдържанието */
+    margin: 0 auto; /* центрира съдържанието на страницата */
+  }
+  
+  .footer-logo img {
+    max-width: 150px; /* или друг размер, който ви устройва */
+    height: auto;
+  }
+  
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .footer-social {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .footer-social a {
+    margin: 0 10px;
+  }
+  
+  .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap; /* позволява на елементите да се прехвърлят на следващ ред */
+    justify-content: center; /* центрира елементите хоризонтално */
+  }
+  
+  .footer-nav li {
+    margin: 0 20px;
+  }
+  
+  .footer-nav a {
+    color: white; /* Цвят по подразбиране */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Плавна смяна на цвета */
+    font-weight: bold; /* Удебеляване на текста */
+}
+
+    .footer-nav a:hover {
+    color: #f39c12; /* Промяна на цвета при преминаване с мишката */
+}
+
+  
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-weight: bold; /* удебелен шрифт */
+    margin: 0 20px; /* увеличаваме разстоянието между елементите */
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    color: #f39c12;
+}
+  
+  .footer-copyright {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  
